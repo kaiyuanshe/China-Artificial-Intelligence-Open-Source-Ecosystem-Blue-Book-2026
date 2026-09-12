@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/bestony/pi-bestony-translate/main/schema/translation.config.schema.json",
+  "sourceLang": "zh-CN",
+  "targets": [
+    "en"
+  ],
+  "tone": "Policy and industry analysis for international readers. Formal, neutral, third person; no sloganeering, no exclamation marks.",
+  "doNotTranslate": [],
+  "preserve": [
+    "frontmatter",
+    "code",
+    "inline-code",
+    "urls",
+    "html-tags",
+    "image-paths"
+  ],
+  "output": {
+    "pattern": "{dir}/{name}.{lang}{ext}"
+  },
+  "review": {
+    "sourcePattern": "{dir}/{name}{ext}"
+  }
+}

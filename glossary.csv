@@ -1,0 +1,207 @@
+source,en,note,keep
+开源生态,open source ecosystem,"""open source"" unhyphenated throughout, including as an adjective",
+AI开源生态,AI open source ecosystem,,
+AI开源项目,AI open source project,,
+开源料具,open source artifacts and tooling,"Bespoke term in the source (物料+工具): models, datasets, training/inference code, toolchains, composition-analysis tools",
+开源网络,open source network,,
+开源治理,open source governance,,
+开源生态系统环境,open source ecosystem environment,,
+开源许可证,open source license,"The source also writes 开源协议 loosely; render both as ""open source license"", never ""open source protocol""",
+开源贡献者,open source contributor,,
+开源使用者,open source user,,
+开源运营者,open source operator,"""operator"" = the entity running a community or platform, not a telecom-style operator",
+开源服务者,open source service provider,,
+开源治理者,open source governance body,"never ""governor""",
+参与主体,participant,"""stakeholder"" where the sentence enumerates actors",
+多主体,multi-stakeholder,,
+生态模式,ecosystem model,,
+中心主导型,center-led model,Led by one company or institution; the four model labels stay parallel and are capitalised in headings and tables,
+周边生态型,peripheral ecosystem model,"Growth around an existing mainstream stack; not ""peripheral economy""",
+标准探索型,standard-exploration model,,
+中立治理型,neutral-governance model,,
+生态壁垒,ecosystem moat,,
+路径依赖,path dependence,,
+锁定效应,lock-in effect,,
+事实标准,de facto standard,,
+生态韧性,ecosystem resilience,,
+公共基础设施,public infrastructure,,
+技术底座,technology foundation,"""shared foundation"" when preceded by 公共",
+开源文化,open source culture,,
+开源根社区,root open source community,Chinese policy term for the community that originates a project; alternative: upstream community,
+源头创新中心,source innovation center,Verify the official English name of 国产人工智能生态源头创新中心,
+全栈自研,full-stack in-house development,,
+底层共性技术,foundational common technologies,,
+普惠算力,affordable computing power,,
+自主可控,self-reliance and controllability,"Key policy term. Alternatives: ""independent and controllable"" / ""autonomous and controllable""; pick one for the whole book",
+国产替代,domestic substitution,"Also ""import substitution""; keep one",
+卡脖子,chokepoint,e.g. 芯片卡脖子 → chokepoints in chips,
+应用牵引,application-driven,Pair with 市场驱动 = market-driven,
+市场驱动,market-driven,,
+全链控制,full-stack control,"US advantage across the whole chain; alternative ""full-chain control""",
+赋能,empower,"""enable""/""support"" where 赋能 is filler rather than a real claim",
+底座平权,levelling the playing field at the foundation layer,,
+中间层,middle layer,"The layer between base models and industry solutions (industry-adaptation components, toolkits)",
+耐心资本,patient capital,,
+长期主义,long-termism,,
+试错成本,cost of trial and error,,
+顶层设计,top-level design,,
+数据要素,data asset,"Not the literal ""data element""; ""data as a factor of production"" where the source is about marketisation",
+数智时代,the digital-intelligence era,,
+数智转型,digital-intelligence transformation,,
+场景,use case,"One rendering for 场景/应用场景/业务场景; keep ""scenario"" only inside official program names",
+场景牵引,use-case-driven,,
+场景清单,use case list,"Official program names may keep ""scenario list""",
+政府工作报告,the Government Work Report,Capitalised name of the annual report,
+政策工具,policy instrument,,
+规上,above-scale enterprise,"Chinese statistical category; gloss once as ""above-scale (size-designated) enterprise""",
+复合型人才,multidisciplinary talent,"not ""compound talent""",
+超级个体,super individual,"Paired with 一人公司/OPC; alternative ""solo innovator""",
+一人公司,One-Person Company (OPC),The source itself supplies the English gloss,
+开源布道师,open source evangelist,,
+开发者关系,developer relations,,
+算力券,computing voucher,算力补贴 → computing subsidy,
+模型券,model voucher,,
+语料券,corpus voucher,,
+数据券,data voucher,,
+一网通办,one-stop government services,,
+拎包入驻,move-in ready,,
+零租工位,rent-free workstation,,
+政企场景,government and enterprise use cases,,
+学习中心,Learning Center,Capitalise when it names the university-enterprise program,
+实训营,hands-on training camp,,
+微专业,micro-major,alternative: micro-credential program,
+通识课,general education course,,
+贡献评价,contribution-based evaluation,,
+开源学习社区,open source learning community,,
+智能体,agent,"Source glosses 智能体（Agent） once; ""AI agent"" at first mention, then ""agent""",
+大模型,large model,"Umbrella term incl. multimodal models; do not narrow to ""LLM""",
+大语言模型,large language model (LLM),,
+具身智能,embodied AI,,
+智能硬件,smart hardware,,
+端侧智能,on-device AI,,
+万物智联,the intelligent connection of everything,,
+超级个体288,the Super Individual 288 program,Shanghai initiative; verify official English name,
+开源软件促进会（OSI）,Open Source Initiative (OSI),The Chinese name in the source is non-standard; use the official English name,
+中国信通院,China Academy of Information and Communications Technology (CAICT),,
+工信部,Ministry of Industry and Information Technology (MIIT),,
+国务院,State Council,,
+教育部,Ministry of Education,,
+上海市经信委,Shanghai Municipal Commission of Economy and Informatization,,
+开放原子基金会,OpenAtom Foundation,Official English name,
+上海人工智能实验室,Shanghai AI Laboratory,,
+世界人工智能大会,World AI Conference (WAIC),,
+全球开发者先锋大会,Global Developer Pioneer Conference,Verify official English name,
+大公坊AI硬件OPC·hub,Dagongfang AI Hardware OPC Hub,Verify official English name,
+白玉兰开源AI社区,Baiyulan Open Source AI Community,Baiyulan (magnolia) is Shanghai's city flower; verify official English name,
+AI花猫社区,Huamao AI Community,"Proper name - never ""flower cat""",
+AI+X经管实训营,AI+X Business and Management Hands-on Training Camp,,
+数字化管理决策实验室,Digital Management Decision Lab,Verify official English name,
+上海交通大学,Shanghai Jiao Tong University,,
+上海交大,Shanghai Jiao Tong University,,
+浙江大学,Zhejiang University,,
+华东师范大学,East China Normal University,,
+株洲科技职业学院,Zhuzhou Vocational College of Science and Technology,,
+中国云谷,China Cloud Valley,,
+模速空间,Mosu Space,Shanghai Xuhui incubator for large models; verify official English name,
+张江人工智能岛,Zhangjiang AI Island,,
+潮新闻,Chao News,Verify official English name,
+传播大脑,Chuanbo Danao,Verify official English name,
+Apache软件基金会,Apache Software Foundation,,
+Linux基金会,Linux Foundation,,
+云原生计算基金会,Cloud Native Computing Foundation (CNCF),,
+开源管理办公室,open source program office (OSPO),Expand at first mention even though the source already abbreviates to OSPO,
+阿里巴巴,Alibaba,,
+阿里云,Alibaba Cloud,,
+腾讯,Tencent,,
+百度,Baidu,,
+华为,Huawei,,
+字节,ByteDance,source also writes 字节,
+蚂蚁集团,Ant Group,,
+网易,NetEase,,
+智谱,Zhipu AI,,
+月之暗面,Moonshot AI,,
+阶跃星辰,StepFun,,
+商汤科技,SenseTime,,
+零一万物,01.AI,,
+第四范式,4Paradigm,,
+云从科技,CloudWalk,,
+宇树科技,Unitree,,
+优必选,UBTECH,,
+大疆创新,DJI,,
+寒武纪,Cambricon,,
+昆仑芯,Kunlunxin,,
+钉钉,DingTalk,,
+千问,Qwen,Source mixes 千问 and 通义千问; both render as Qwen,
+通义千问,Qwen,,
+豆包,Doubao,"Keep the product name, transliterated",
+书生系列,Intern series,Shanghai AI Laboratory's model series; official English name is Intern,
+魔搭社区,ModelScope,,
+魔乐,Modelers,Verify official English name,
+焕新,Huanxin community,Verify official English name,
+思源笔记,SiYuan,,
+苏州语灵,Suzhou Yuling,Company behind Dify; verify official English name,
+上海千汇科技,Shanghai Qianhui Technology,Company behind Cherry Studio; verify,
+国家地方共建人形机器人创新中心,National and Local Co-built Humanoid Robot Innovation Center,Keep the full name at first mention,
+智海,Zhi Hai,Platform name; verify official English name,
+青龙,Qinglong,Robot platform name; do not translate,
+格物,Gewu,,
+白虎,Baihu,,
+天元杯,Tianyuan Cup,,
+Datawhale,,,true
+GitHub,,,true
+Hugging Face,,,true
+ModelScope,,,true
+DeepSeek,,,true
+Qwen,,,true
+GLM,,,true
+Kimi,,,true
+MiniMax,,,true
+OpenLoong,,,true
+Milvus,,,true
+PaddlePaddle,,,true
+Dify,,,true
+lobe-chat,,,true
+siyuan,,,true
+hello-agents,,,true
+ms-swift,,,true
+DeepEP,,,true
+OpenBMB,,,true
+OpenMMLab,,,true
+OpenDataLab,,,true
+CAMEL AI,,,true
+Fengshenbang,,"封神榜, also spelled in Chinese in the source",true
+ComfyUI,,,true
+Fooocus,,,true
+AutoGPT,,,true
+ChatGPT,,,true
+Cursor,,,true
+Cline,,,true
+OpenI,,,true
+LobeHub,,,true
+OpenRank,,activity metric; keep the name,true
+OPC,,,true
+SIG,,,true
+OSPO,,,true
+PMF,,,true
+MCP,,,true
+CUDA,,,true
+ROCm,,,true
+oneAPI,,,true
+CANN,,,true
+RISC-V,,,true
+AGI,,,true
+NeurIPS,,,true
+Apache 2.0,,,true
+MIT,,,true
+AGPL 3.0,,,true
+CC BY 4.0,,,true
+CC BY-NC-SA 4.0,,,true
+SHL-2.1,,,true
+Modified MIT,,,true
+AI STEP,,,true
+YAML,,,true
+AI+X,,,true
+AI+,,e.g. AI+制造 → AI+ Manufacturing,true
+Cherry studio,Cherry Studio,Capitalise the product name; the table writes it as cherry-studio,
+perplexity,Perplexity,The source writes it lowercase in Table 1; capitalise,
+产品市场匹配,product-market fit (PMF),Source writes 产品市场匹配（PMF）,
