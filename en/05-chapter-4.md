@@ -1,6 +1,6 @@
 **Chapter 4: Practical problems in the development of China's AI open-source ecosystem**
 
-**4.1 Insufficient understanding of ecosystem attributes, a relatively strong industrial mindset**
+**4.1 Insufficient understanding of ecosystem attributes opposing a relatively strong industrial mindset**
 
 **4.1.1 Government: a weak grasp of ecosystem attributes, a weak sense of role boundaries**
 
