@@ -1,0 +1,10 @@
+[book]
+title = "中国人工智能开源生态蓝皮书"
+authors = ["Datawhale 人工智能产业研究院"]
+language = "zh-CN"
+src = "src"
+
+[output.html]
+git-repository-url = "https://github.com/kaiyuanshe/China-Artificial-Intelligence-Open-Source-Ecosystem-Blue-Book-2026"
+site-url = "/China-Artificial-Intelligence-Open-Source-Ecosystem-Blue-Book-2026/zh/"
+default-theme = "light"

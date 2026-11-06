@@ -1,0 +1,10 @@
+[book]
+title = "China AI Open Source Ecosystem Blue Paper"
+authors = ["Datawhale AI Industry Research Institute"]
+language = "en"
+src = "src"
+
+[output.html]
+git-repository-url = "https://github.com/kaiyuanshe/China-Artificial-Intelligence-Open-Source-Ecosystem-Blue-Book-2026"
+site-url = "/China-Artificial-Intelligence-Open-Source-Ecosystem-Blue-Book-2026/en/"
+default-theme = "light"
