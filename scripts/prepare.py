@@ -68,6 +68,68 @@ def promote(lang: str, name: str, text: str) -> tuple[str, int]:
     return text, count
 
 
+CITE = re.compile(r"\\\[(\d+)\\\]")
+REF_ENTRY = re.compile(r"^\\\[(\d+)\\\] (.+)$")
+URL = re.compile(r"https?://\S+")
+CITED_TITLE = {"zh": "本章参考文献", "en": "References cited in this chapter"}
+
+
+def autolink(entry: str) -> str:
+    # Sources escape `_` etc. for pandoc; inside `<...>` escapes are literal.
+    return URL.sub(lambda m: "<" + re.sub(r"\\([\\_*\[\]#&~])", r"\1", m[0]) + ">", entry)
+
+
+def parse_refs(text: str) -> dict[int, str]:
+    refs = {}
+    for line in text.split("\n"):
+        if m := REF_ENTRY.match(line.strip()):
+            refs[int(m[1])] = m[2]
+    return refs
+
+
+def link_citations(lang: str, name: str, text: str, refs: dict[int, str]) -> str:
+    """Link `[N]` markers to a per-page reference list and append that list.
+
+    mdBook renumbers real footnotes per page, which would break the global
+    numbering the paper uses, so the numbered list is built by hand. Anchors
+    carry the file prefix so concatenated docx/PDF input keeps ids unique.
+    Markers inside grid tables are left alone: rewriting them would change the
+    cell width and break the grid (they are linked later, in the HTML tables).
+    """
+    prefix = name.split("-")[0]
+    cited: set[int] = set()
+
+    def sub(m: re.Match) -> str:
+        n = int(m[1])
+        if n not in refs:
+            log.warning("%s cites [%d] which is missing from the references", name, n)
+            return m[0]
+        cited.add(n)
+        return f"[{m[0]}](#c{prefix}-ref-{n})"
+
+    body = [
+        l if l[:1] in "|+" else CITE.sub(sub, l) for l in text.split("\n")
+    ]
+    all_cited = cited | {int(n) for n in CITE.findall(text) if int(n) in refs}
+    if not all_cited:
+        return text
+    tail = [f"## {CITED_TITLE[lang]}", ""]
+    for n in sorted(all_cited):
+        tail += [f"[]{{#c{prefix}-ref-{n}}}\\[{n}\\] {autolink(refs[n])}", ""]
+    return "\n".join(body).rstrip("\n") + "\n\n" + "\n".join(tail)
+
+
+def link_table_citations(name: str, gfm: str) -> str:
+    prefix = name.split("-")[0]
+
+    def table(m: re.Match) -> str:
+        return re.sub(
+            r"\[(\d+)\]", lambda c: f'<a href="#c{prefix}-ref-{c[1]}">[{c[1]}]</a>', m[0]
+        )
+
+    return re.sub(r"<table.*?</table>", table, gfm, flags=re.S)
+
+
 def to_gfm(text: str) -> str:
     # `-raw_html` is NOT used: complex tables must fall back to HTML tables.
     return subprocess.run(
@@ -86,16 +148,26 @@ def main(lang: str) -> None:
     shutil.copytree(ROOT / "media", work / "md" / "media")
     shutil.copy(ROOT / "book" / lang / "book.toml", work / "book.toml")
 
+    refs = parse_refs((ROOT / lang / "07-references.md").read_text(encoding="utf-8"))
+    log.info("%s: %d references", lang, len(refs))
     summary = ["# Summary", ""]
     for path in sorted((ROOT / lang).glob("*.md")):
         if path.name in SKIP:
             continue
         text, n = promote(lang, path.name, path.read_text(encoding="utf-8"))
+        if path.name.startswith("07-"):
+            text = "\n".join(
+                f"[]{{#ref-{m[1]}}}" + autolink(l) if (m := REF_ENTRY.match(l.strip())) else l
+                for l in text.split("\n")
+            )
+        elif not path.name.startswith("08-"):
+            text = link_citations(lang, path.name, text, refs)
         if n == 0:
             log.error("no headings detected in %s", path.name)
             sys.exit(1)
         (work / "md" / path.name).write_text(text, encoding="utf-8")
-        (work / "src" / path.name).write_text(to_gfm(text), encoding="utf-8")
+        gfm = link_table_citations(path.name, to_gfm(text)) if not path.name.startswith("07-") else to_gfm(text)
+        (work / "src" / path.name).write_text(gfm, encoding="utf-8")
         title = next(l[2:] for l in text.split("\n") if l.startswith("# "))
         summary.append(f"- [{title}]({path.name})")
         log.info("%s/%s: %d headings", lang, path.name, n)
