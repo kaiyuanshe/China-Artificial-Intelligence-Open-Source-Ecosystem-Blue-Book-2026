@@ -4,19 +4,33 @@
 
 **March 2026**
 
-**Published by:** Datawhale
+**Published by:**
+
+::: credits
++:----------------------------------------------------------------------------:+:----------------------------------------------------------------------------:+:----------------------------------------------------------------------------:+
+|                                                                              | ![](logos/hangzhoushirengongzhinengkaiyuanshengtaixueyuan.jpg){height=1.2cm} |                                                                              |
+|                                                                              |                                                                              |                                                                              |
+|                                                                              | Hangzhou AI Open Source Ecosystem Academy                                    |                                                                              |
++------------------------------------------------------------------------------+------------------------------------------------------------------------------+------------------------------------------------------------------------------+
+:::
 
 **Co-published by:**
 
-ModelScope
-
-Artificial Intelligence Institute, Shanghai Jiao Tong University
-
-Center for AI Education and Teaching Research, Zhejiang University
-
-Chuanbo Danao
-
-Chao News
+::: credits
++:----------------------------------------------------------------------------:+:----------------------------------------------------------------------------:+:----------------------------------------------------------------------------:+
+| ![](logos/datawhale.png){height=1.2cm}                                       | ![](logos/kaiyuanshe.png){height=1.2cm}                                      | ![](logos/zhejiarengongzhinengxueyuan.jpg){height=1.2cm}                     |
+|                                                                              |                                                                              |                                                                              |
+| Datawhale                                                                    | KAIYUANSHE                                                                   | Zhejiang Provincial Academy of Artificial Intelligence                       |
++------------------------------------------------------------------------------+------------------------------------------------------------------------------+------------------------------------------------------------------------------+
+| ![](logos/shanghai-jiaotong-daxue-xiaohui.png){height=1.2cm}                 | ![](logos/shanghai-jiaotong-daxue-zhongwen-hengban.png){height=1.2cm}        | ![](logos/moda-shequ.png){height=1.2cm}                                      |
+|                                                                              |                                                                              |                                                                              |
+| Artificial Intelligence Institute, Shanghai Jiao Tong University             | Antai College of Economics and Management, Shanghai Jiao Tong University     | ModelScope                                                                   |
++------------------------------------------------------------------------------+------------------------------------------------------------------------------+------------------------------------------------------------------------------+
+| ![](logos/chuanbo-danao.png){height=1.2cm}                                   | ![](logos/chaoxinwen.png){height=1.2cm}                                      |                                                                              |
+|                                                                              |                                                                              |                                                                              |
+| Commind                                                                      | Tide News                                                                    | Center for AI Education and Teaching Research, Zhejiang University           |
++------------------------------------------------------------------------------+------------------------------------------------------------------------------+------------------------------------------------------------------------------+
+:::
 
 **March 2026**
 
@@ -25,6 +39,8 @@ Chao News
 **Project Team:** XU Xuchu, FAN Jingjing, SI Yuxin, JIANG Jing, GAN Yuanqi, MA Jingmin, CAO Yu
 
 **Writing Team:** XU Xuchu, JIANG Jing, SI Yuxin, CHEN Limeng
+
+**Credit:** Writing Team; [Liuchang Tan](mailto:helenlctan@gmail.com); [Raphael 拉斐尔 Kohler](mailto:raphael.kohler@web.de)
 
 **Expert Advisors:** WU Fei, JIN Yaohui, WANG Wei, JIANG Kaida, SHI Hongzhu, ZHANG Jian, LIN Lüqiang, WU Zhuo, TENG Ailing**\
 Preface**

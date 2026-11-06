@@ -130,12 +130,55 @@ def link_table_citations(name: str, gfm: str) -> str:
     return re.sub(r"<table.*?</table>", table, gfm, flags=re.S)
 
 
+EMPTY_STRONG = re.compile(r"\*\*(\s+)\*\*")
+STRONG = re.compile(r"\*\*(?=\S)(.+?)(?<=\S)\*\*")
+
+
+def strong_to_html(gfm: str) -> str:
+    """Turn `**x**` into `<strong>x</strong>` for mdBook.
+
+    CommonMark (pulldown-cmark) refuses to close `**` that follows CJK or
+    full-width punctuation and precedes a letter or CJK character, e.g.
+    `**发布单位：**Datawhale`, so such runs would render as literal asterisks.
+    Fenced code blocks are left alone.
+    """
+    out, fenced = [], False
+    for line in gfm.split("\n"):
+        if line.lstrip().startswith("```"):
+            fenced = not fenced
+        if not fenced:
+            line = EMPTY_STRONG.sub(r"\1", line)  # e.g. `**　**` in table cells
+            line = STRONG.sub(r"<strong>\1</strong>", line)
+        out.append(line)
+    return "\n".join(out)
+
+
 def to_gfm(text: str) -> str:
     # `-raw_html` is NOT used: complex tables must fall back to HTML tables.
-    return subprocess.run(
+    gfm = subprocess.run(
         ["pandoc", "-f", "markdown", "-t", "gfm", "--wrap=none"],
         input=text, capture_output=True, text=True, check=True,
     ).stdout
+    return strong_to_html(gfm)
+
+
+# Logos drawn in white; they get a dark backing in the build copies.
+LIGHT_LOGOS = {"chuanbo-danao.png"}
+
+
+def trim_logos(folder: Path) -> None:
+    """Crop the transparent/white margins of the logo copies (originals stay
+    untouched) so logos line up with their publisher names."""
+    im = shutil.which("magick") or shutil.which("convert")  # IM7 / IM6 (Ubuntu)
+    if not im:
+        log.warning("ImageMagick not found: logos are used untrimmed")
+        return
+    for f in folder.glob("*"):
+        if f.suffix in {".png", ".jpg"}:
+            cmd = [im, str(f), "-fuzz", "8%", "-trim", "+repage"]
+            if f.name in LIGHT_LOGOS:  # white artwork: invisible on white pages
+                cmd += ["-bordercolor", "none", "-border", "14", "-background", "#2b2b2b", "-alpha", "remove"]
+            subprocess.run(cmd + [str(f)], check=True)
 
 
 def main(lang: str) -> None:
@@ -146,7 +189,11 @@ def main(lang: str) -> None:
     (work / "md").mkdir()
     shutil.copytree(ROOT / "media", work / "src" / "media")
     shutil.copytree(ROOT / "media", work / "md" / "media")
+    for sub in ("src", "md"):
+        shutil.copytree(ROOT / "logos", work / sub / "logos")
+        trim_logos(work / sub / "logos")
     shutil.copy(ROOT / "book" / lang / "book.toml", work / "book.toml")
+    shutil.copy(ROOT / "scripts" / "credits.css", work / "credits.css")
 
     refs = parse_refs((ROOT / lang / "07-references.md").read_text(encoding="utf-8"))
     log.info("%s: %d references", lang, len(refs))

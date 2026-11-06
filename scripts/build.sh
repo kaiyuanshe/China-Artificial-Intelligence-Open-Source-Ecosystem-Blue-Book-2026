@@ -10,8 +10,8 @@ rm -rf site && mkdir -p site/downloads
 for lang in zh en; do
   # No associative arrays: macOS ships bash 3.2.
   case "$lang" in
-    zh) NAME="中国人工智能开源生态蓝皮书"; LOCALE="zh" ;;
-    en) NAME="China-AI-Open-Source-Ecosystem-Blue-Paper"; LOCALE="en" ;;
+    zh) NAME="中国人工智能开源生态蓝皮书"; LOCALE="zh"; TOC_TITLE="目录" ;;
+    en) NAME="China-AI-Open-Source-Ecosystem-Blue-Paper"; LOCALE="en"; TOC_TITLE="Contents" ;;
   esac
   echo "==> [$lang] prepare"
   python3 scripts/prepare.py "$lang"
@@ -21,12 +21,13 @@ for lang in zh en; do
   (cd "$work" && mdbook build -d "$ROOT/site/$lang")
 
   echo "==> [$lang] docx"
-  (cd "$work/md" && pandoc --from markdown --to docx --toc --toc-depth=3 \
-      --metadata "lang=$LOCALE" --resource-path=. \
+  (cd "$work/md" && pandoc --from markdown --to docx --lua-filter="$ROOT/scripts/link_table_cites.lua" --toc --toc-depth=3 \
+      --metadata "lang=$LOCALE" --metadata "toc-title=$TOC_TITLE" --resource-path=. \
       -o "$ROOT/site/downloads/$NAME.docx" $(ls *.md | sort))
+  python3 scripts/docx_toc.py "site/downloads/$NAME.docx"
 
   echo "==> [$lang] pdf"
-  (cd "$work/md" && pandoc --from markdown --to html5 --standalone --embed-resources \
+  (cd "$work/md" && pandoc --from markdown --to html5 --lua-filter="$ROOT/scripts/link_table_cites.lua" --standalone --embed-resources \
       --toc --toc-depth=2 --metadata "lang=$LOCALE" \
       --metadata "title=$(grep -m1 '^# ' 00-front-matter.md | cut -c3-)" \
       --css "$ROOT/scripts/pdf.css" --resource-path=. \

@@ -10,3 +10,10 @@ tr { break-inside: avoid; }
 a { color: #1a5fb4; text-decoration: none; word-break: break-all; }
 nav#TOC ul { list-style: none; padding-left: 1.2em; } nav#TOC > ul { padding-left: 0; }
 nav#TOC a { color: #222; }
+header#title-block-header { break-after: page; }
+nav#TOC { break-after: page; }
+/* Publisher logo grids (front matter): borderless, logo over name. */
+.credits table { border: 0; width: 100%; margin: 6pt 0 12pt; }
+.credits th, .credits td { border: 0 !important; background: transparent !important; text-align: center; vertical-align: top; padding: 6pt 4pt; font-size: 9.5pt; line-height: 1.4; }
+.credits td p { margin: 3pt 0; }
+.credits img { margin: 0 auto; display: inline-block; }
