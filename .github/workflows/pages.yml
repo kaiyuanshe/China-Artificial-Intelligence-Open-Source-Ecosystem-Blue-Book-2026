@@ -25,7 +25,7 @@ jobs:
       - name: Install system packages (pandoc, CJK fonts, WeasyPrint)
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends pandoc fonts-noto-cjk weasyprint
+          sudo apt-get install -y --no-install-recommends pandoc python3-lxml imagemagick fonts-noto-cjk weasyprint
 
       - name: Install mdBook
         run: |

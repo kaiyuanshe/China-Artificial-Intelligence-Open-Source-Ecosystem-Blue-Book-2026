@@ -8,3 +8,4 @@ src = "src"
 git-repository-url = "https://github.com/kaiyuanshe/China-Artificial-Intelligence-Open-Source-Ecosystem-Blue-Book-2026"
 site-url = "/China-Artificial-Intelligence-Open-Source-Ecosystem-Blue-Book-2026/en/"
 default-theme = "light"
+additional-css = ["credits.css"]
