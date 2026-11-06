@@ -20,13 +20,13 @@ Chao News
 
 **March 2026**
 
-**Editorial Committee:** Xu Xuchu, Fan Jingjing, Si Yuxin
+**Editorial Committee:** XU Xuchu, FAN Jingjing, SI Yuxin
 
-**Project Team:** Xu Xuchu, Fan Jingjing, Si Yuxin, Jiang Jing, Gan Yuanqi, Ma Jingmin, Cao Yu
+**Project Team:** XU Xuchu, FAN Jingjing, SI Yuxin, JIANG Jing, GAN Yuanqi, MA Jingmin, CAO Yu
 
-**Writing Team:** Xu Xuchu, Jiang Jing, Si Yuxin, Chen Limeng
+**Writing Team:** XU Xuchu, JIANG Jing, SI Yuxin, CHEN Limeng
 
-**Expert Advisors:** Wu Fei, Jin Yaohui, Wang Wei, Jiang Kaida, Shi Hongzhu, Zhang Jian, Lin Lüqiang, Wu Zhuo, Teng Ailing**\
+**Expert Advisors:** WU Fei, JIN Yaohui, WANG Wei, JIANG Kaida, SHI Hongzhu, ZHANG Jian, LIN Lüqiang, WU Zhuo, TENG Ailing**\
 Preface**
 
 In the latest wave of artificial intelligence, represented by large models and agents, technology is reshaping production methods and social structures at unprecedented speed. Open source, the most vital collaborative innovation mechanism of the digital-intelligence era, is leaping from a software development paradigm to the infrastructure and innovation network of the AI wave, and has become a key force in lowering technical barriers, accelerating the diffusion of innovation, reshaping the industrial landscape and boosting innovative employment. China attaches great importance to building the AI open source ecosystem. This year's Government Work Report stressed the need to "create new forms of the intelligent economy" and explicitly called for "supporting the development of AI open source communities and promoting the prosperity of the open source ecosystem." Against this background, this blue paper systematically explains the meaning and structure of the AI open source ecosystem, and sets out that it is not merely a technical issue but a comprehensive proposition that bears on national competitiveness, the path of industrial upgrading and the talent development system.
