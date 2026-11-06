@@ -27,12 +27,16 @@ for lang in zh en; do
   python3 scripts/docx_toc.py "site/downloads/$NAME.docx"
 
   echo "==> [$lang] pdf"
-  (cd "$work/md" && pandoc --from markdown --to html5 --lua-filter="$ROOT/scripts/link_table_cites.lua" --standalone --embed-resources \
-      --toc --toc-depth=2 --metadata "lang=$LOCALE" \
-      --metadata "title=$(grep -m1 '^# ' 00-front-matter.md | cut -c3-)" \
-      --css "$ROOT/scripts/pdf.css" --resource-path=. \
-      -o ../book.html $(ls *.md | sort))
-  weasyprint --quiet "$work/book.html" "site/downloads/$NAME.pdf"
+  if [ "$lang" = "zh" ]; then
+    cp "$ROOT/zh-final.pdf" "$ROOT/site/downloads/$NAME.pdf"
+  else
+    (cd "$work/md" && pandoc --from markdown --to html5 --lua-filter="$ROOT/scripts/link_table_cites.lua" --standalone --embed-resources \
+        --toc --toc-depth=2 --metadata "lang=$LOCALE" \
+        --metadata "title=$(grep -m1 '^# ' 00-front-matter.md | cut -c3-)" \
+        --css "$ROOT/scripts/pdf.css" --resource-path=. \
+        -o ../book.html $(ls *.md | sort))
+    weasyprint --quiet "$work/book.html" "site/downloads/$NAME.pdf"
+  fi
 done
 
 cp scripts/index.html site/index.html

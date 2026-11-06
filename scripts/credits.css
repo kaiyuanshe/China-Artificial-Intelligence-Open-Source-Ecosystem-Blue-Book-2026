@@ -1,5 +1,8 @@
-/* Publisher logo grids (front matter): borderless, logo over name. */
-.credits table { border: 0; width: 100%; margin: 6pt 0 12pt; }
-.credits th, .credits td { border: 0 !important; background: transparent !important; text-align: center; vertical-align: top; padding: 6pt 4pt; font-size: 9.5pt; line-height: 1.4; }
-.credits td p { margin: 3pt 0; }
-.credits img { margin: 0 auto; display: inline-block; }
+/* Publisher logo grids (front matter): flex-wrap, fixed height, original aspect ratio. */
+.credits { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 24px 48px; margin: 14px 0 24px; }
+.credits table, .credits tbody, .credits tr { display: contents; }
+.credits colgroup, .credits td:empty { display: none; }
+.credits td { border: 0 !important; background: transparent !important; text-align: center; padding: 8px 12px; font-size: 9.5pt; line-height: 1.4; display: flex; flex-direction: column; align-items: center; }
+.credits td p { margin: 4px 0; max-width: 220px; }
+.credits td p:first-child { max-width: none; }
+.credits img { height: 1.2cm !important; width: auto !important; max-width: none !important; display: block; margin: 0 auto; }

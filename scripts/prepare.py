@@ -153,6 +153,17 @@ def strong_to_html(gfm: str) -> str:
     return "\n".join(out)
 
 
+CREDITS_BLOCK = re.compile(r"::: credits\n(.*?)\n:::", re.S)
+LOGO_IMG = re.compile(r"!\[\]\(logos/[^\s)]+\)\{[^}]+\}")
+
+
+def credits_logos_only(text: str) -> str:
+    return CREDITS_BLOCK.sub(
+        lambda m: "::: credits\n" + "\u3000\u3000".join(LOGO_IMG.findall(m[1])) + "\n:::",
+        text,
+    )
+
+
 def to_gfm(text: str) -> str:
     # `-raw_html` is NOT used: complex tables must fall back to HTML tables.
     gfm = subprocess.run(
@@ -160,10 +171,6 @@ def to_gfm(text: str) -> str:
         input=text, capture_output=True, text=True, check=True,
     ).stdout
     return strong_to_html(gfm)
-
-
-# Logos drawn in white; they get a dark backing in the build copies.
-LIGHT_LOGOS = {"chuanbo-danao.png"}
 
 
 def trim_logos(folder: Path) -> None:
@@ -175,10 +182,7 @@ def trim_logos(folder: Path) -> None:
         return
     for f in folder.glob("*"):
         if f.suffix in {".png", ".jpg"}:
-            cmd = [im, str(f), "-fuzz", "8%", "-trim", "+repage"]
-            if f.name in LIGHT_LOGOS:  # white artwork: invisible on white pages
-                cmd += ["-bordercolor", "none", "-border", "14", "-background", "#2b2b2b", "-alpha", "remove"]
-            subprocess.run(cmd + [str(f)], check=True)
+            subprocess.run([im, str(f), "-fuzz", "8%", "-trim", "+repage", str(f)], check=True)
 
 
 def main(lang: str) -> None:
@@ -212,7 +216,8 @@ def main(lang: str) -> None:
         if n == 0:
             log.error("no headings detected in %s", path.name)
             sys.exit(1)
-        (work / "md" / path.name).write_text(text, encoding="utf-8")
+        md_text = credits_logos_only(text) if path.name.startswith("00-") else text
+        (work / "md" / path.name).write_text(md_text, encoding="utf-8")
         gfm = link_table_citations(path.name, to_gfm(text)) if not path.name.startswith("07-") else to_gfm(text)
         (work / "src" / path.name).write_text(gfm, encoding="utf-8")
         title = next(l[2:] for l in text.split("\n") if l.startswith("# "))

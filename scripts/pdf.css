@@ -12,8 +12,6 @@ nav#TOC ul { list-style: none; padding-left: 1.2em; } nav#TOC > ul { padding-lef
 nav#TOC a { color: #222; }
 header#title-block-header { break-after: page; }
 nav#TOC { break-after: page; }
-/* Publisher logo grids (front matter): borderless, logo over name. */
-.credits table { border: 0; width: 100%; margin: 6pt 0 12pt; }
-.credits th, .credits td { border: 0 !important; background: transparent !important; text-align: center; vertical-align: top; padding: 6pt 4pt; font-size: 9.5pt; line-height: 1.4; }
-.credits td p { margin: 3pt 0; }
-.credits img { margin: 0 auto; display: inline-block; }
+/* Publisher logos (front matter): logo-only flex wrap with fixed height and original aspect ratio. */
+.credits p { display: flex; flex-wrap: wrap; align-items: center; margin: 8pt 0 16pt; line-height: 2.2; }
+.credits img { height: 1.2cm !important; width: auto !important; max-width: none !important; display: inline-block; margin: 8pt 26pt 8pt 0; }
