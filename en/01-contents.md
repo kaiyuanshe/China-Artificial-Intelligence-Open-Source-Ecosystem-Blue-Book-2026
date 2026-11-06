@@ -16,9 +16,9 @@ Chapter 2: Why China must accelerate the development of the AI open source ecosy
 
 2.4 Talent development significance: bridging industry and academia, accelerating talent growth ... 6
 
-Chapter 3: The state of China's AI open source ecosystem ... 9
+Chapter 3: The development of China's open source AI ecosystem ... 9
 
-3.1 Core elements of the AI open source ecosystem ... 9
+3.1 Core elements of the open source AI ecosystem ... 9
 
 3.2 Ecosystem models of AI open source projects ... 11
 
@@ -34,11 +34,11 @@ Chapter 3: The state of China's AI open source ecosystem ... 9
 
 3.4.2 Differences in development paths: application prosperity in China, full-stack control in the US ... 21
 
-3.4.3 Differences in ecosystem models: dual drivers of centralized platforms and use cases in China, diversified balance in the US ... 22
+3.4.3 Differences in ecosystem models: platform-centered and use-case-driven development in China; a more balanced mix in the United States ... 22
 
-3.4.4 Differences in the talent situation: China catching up in scale, the US with a mature system ... 23
+3.4.4 Differences in the talent landscape: China's growing talent base and the mature US talent ecosystem ... 23
 
-3.4.5 Differences in the governance landscape: cultivating growth in China, complete institutions in the US ... 24
+3.4.5 Differences in governance: ecosystem cultivation in China versus institutional maturity in the United States ... 24
 
 Chapter 4: Practical problems in the development of China's AI open source ecosystem ... 25
 
