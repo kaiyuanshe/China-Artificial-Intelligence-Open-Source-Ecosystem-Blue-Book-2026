@@ -63,6 +63,18 @@ def main(path: Path) -> None:
         anchor = [e for e in ppr if e.tag in (f"{{{W}}}pStyle", f"{{{W}}}keepNext", f"{{{W}}}keepLines")][-1]
         anchor.addnext(etree.Element(f"{{{W}}}pageBreakBefore"))
 
+    # Add line spacing to publisher logo paragraphs so wrapped rows don't touch.
+    pic_ns = "http://schemas.openxmlformats.org/drawingml/2006/picture"
+    for p in body.findall("w:p", NS):
+        if any("logos/" in c.get("descr", "") for c in p.findall(f".//{{{pic_ns}}}cNvPr")):
+            ppr = p.find("w:pPr", NS)
+            if ppr is None:
+                ppr = etree.Element(f"{{{W}}}pPr")
+                p.insert(0, ppr)
+            sp = etree.SubElement(ppr, f"{{{W}}}spacing")
+            for k, v in (("before", "180"), ("after", "180"), ("line", "340"), ("lineRule", "auto")):
+                sp.set(f"{{{W}}}{k}", v)
+
     # Centre the title in the upper third of its page.
     ppr = title.find("w:pPr", NS)
     for tag, attrs in (("spacing", {"before": "4800", "after": "240"}), ("jc", {"val": "center"})):
