@@ -1,0 +1,12 @@
+@page { size: A4; margin: 22mm 18mm; @bottom-center { content: counter(page); font-size: 9pt; color: #666; } }
+html { font-family: "Noto Sans CJK SC", "Noto Sans SC", "PingFang SC", "Source Han Sans SC", "Helvetica Neue", Arial, sans-serif; font-size: 10.5pt; line-height: 1.7; color: #222; }
+h1 { font-size: 20pt; break-before: page; margin: 0 0 12pt; border-bottom: 1px solid #ccc; padding-bottom: 6pt; }
+header#title-block-header h1 { break-before: auto; font-size: 26pt; border: 0; text-align: center; margin-top: 60mm; }
+h2 { font-size: 15pt; margin-top: 18pt; } h3 { font-size: 12.5pt; } h4 { font-size: 11pt; }
+img { max-width: 100%; height: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 8.5pt; line-height: 1.4; table-layout: auto; }
+th, td { border: 1px solid #bbb; padding: 3pt 4pt; vertical-align: top; }
+tr { break-inside: avoid; }
+a { color: #1a5fb4; text-decoration: none; word-break: break-all; }
+nav#TOC ul { list-style: none; padding-left: 1.2em; } nav#TOC > ul { padding-left: 0; }
+nav#TOC a { color: #222; }
