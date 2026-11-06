@@ -15,8 +15,8 @@ AI开源项目,AI open source project,,
 参与主体,participant,"""stakeholder"" where the sentence enumerates actors",
 多主体,multi-stakeholder,,
 生态模式,ecosystem model,,
-中心主导型,center-led model,Led by one company or institution; the four model labels stay parallel and are capitalised in headings and tables,
-周边生态型,peripheral ecosystem model,"Growth around an existing mainstream stack; not ""peripheral economy""",
+中心主导型,single-organization-led model,Governance and control sit with one company or institution (not a centralised technical architecture); the four model labels stay parallel and are capitalised in headings and tables,
+周边生态型,peripheral-ecosystem model,"Growth around an existing mainstream stack; not ""peripheral economy""",
 标准探索型,standard-exploration model,,
 中立治理型,neutral-governance model,,
 生态壁垒,ecosystem moat,,
@@ -141,7 +141,7 @@ Linux基金会,Linux Foundation,,
 思源笔记,SiYuan,,
 苏州语灵,Suzhou Yuling,Company behind Dify; verify official English name,
 上海千汇科技,Shanghai Qianhui Technology,Company behind Cherry Studio; verify,
-国家地方共建人形机器人创新中心,National and Local Co-built Humanoid Robot Innovation Center,Keep the full name at first mention,
+国家地方共建人形机器人创新中心,National and Local Co-Construction Humanoid Robot Innovation Center,Keep the full name at first mention,
 智海,Zhi Hai,Platform name; verify official English name,
 青龙,Qinglong,Robot platform name; do not translate,
 格物,Gewu,,
@@ -178,7 +178,7 @@ Cursor,,,true
 Cline,,,true
 OpenI,,,true
 LobeHub,,,true
-OpenRank,,activity metric; keep the name,true
+OpenRank,,network-based open source influence metric (not an activity metric); keep the name,true
 OPC,,,true
 SIG,,,true
 OSPO,,,true
