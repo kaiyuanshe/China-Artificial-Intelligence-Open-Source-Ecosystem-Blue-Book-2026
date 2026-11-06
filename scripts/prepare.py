@@ -130,12 +130,36 @@ def link_table_citations(name: str, gfm: str) -> str:
     return re.sub(r"<table.*?</table>", table, gfm, flags=re.S)
 
 
+EMPTY_STRONG = re.compile(r"\*\*(\s+)\*\*")
+STRONG = re.compile(r"\*\*(?=\S)(.+?)(?<=\S)\*\*")
+
+
+def strong_to_html(gfm: str) -> str:
+    """Turn `**x**` into `<strong>x</strong>` for mdBook.
+
+    CommonMark (pulldown-cmark) refuses to close `**` that follows CJK or
+    full-width punctuation and precedes a letter or CJK character, e.g.
+    `**发布单位：**Datawhale`, so such runs would render as literal asterisks.
+    Fenced code blocks are left alone.
+    """
+    out, fenced = [], False
+    for line in gfm.split("\n"):
+        if line.lstrip().startswith("```"):
+            fenced = not fenced
+        if not fenced:
+            line = EMPTY_STRONG.sub(r"\1", line)  # e.g. `**　**` in table cells
+            line = STRONG.sub(r"<strong>\1</strong>", line)
+        out.append(line)
+    return "\n".join(out)
+
+
 def to_gfm(text: str) -> str:
     # `-raw_html` is NOT used: complex tables must fall back to HTML tables.
-    return subprocess.run(
+    gfm = subprocess.run(
         ["pandoc", "-f", "markdown", "-t", "gfm", "--wrap=none"],
         input=text, capture_output=True, text=True, check=True,
     ).stdout
+    return strong_to_html(gfm)
 
 
 def main(lang: str) -> None:

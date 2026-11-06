@@ -26,6 +26,8 @@ Chao News
 
 **Writing Team:** XU Xuchu, JIANG Jing, SI Yuxin, CHEN Limeng
 
+**Credit:** Writing Team; [Liuchang Tan](mailto:helenlctan@gmail.com); [Raphael 拉斐尔 Kohler](mailto:raphael.kohler@web.de)
+
 **Expert Advisors:** WU Fei, JIN Yaohui, WANG Wei, JIANG Kaida, SHI Hongzhu, ZHANG Jian, LIN Lüqiang, WU Zhuo, TENG Ailing**\
 Preface**
 
