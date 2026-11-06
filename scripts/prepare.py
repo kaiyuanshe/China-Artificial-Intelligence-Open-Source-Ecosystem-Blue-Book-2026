@@ -28,6 +28,10 @@ LANG = {
     "en": {"refs": "References", "chapter": r"Chapter \d+: .+"},
 }
 NUM = r"\d+(?:\.\d+)+"
+# Orphan from the original docx conversion: an empty bold run holding a line
+# break. It renders as a literal "****"; drop it from the generated inputs
+# (the sources stay untouched). Remove once the sources are cleaned up.
+EMPTY_BOLD = "**\\**"
 
 
 def promote(lang: str, name: str, text: str) -> tuple[str, int]:
@@ -37,6 +41,8 @@ def promote(lang: str, name: str, text: str) -> tuple[str, int]:
     out, count = [], 0
     for line in text.split("\n"):
         line = line.rstrip()
+        if line == EMPTY_BOLD:
+            continue
         if m := chapter.match(line):
             out.append(f"# {m[1]}")
         elif (m := bold_num.match(line)) or (m := plain_num.match(line)):
