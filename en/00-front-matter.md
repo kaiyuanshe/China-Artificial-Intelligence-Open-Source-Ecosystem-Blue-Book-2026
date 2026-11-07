@@ -16,21 +16,7 @@
 
 **Co-published by:**
 
-::: credits
-+:----------------------------------------------------------------------------:+:----------------------------------------------------------------------------:+:----------------------------------------------------------------------------:+
-| ![](logos/datawhale.png){height=1.2cm}                                       | ![](logos/kaiyuanshe.png){height=1.2cm}                                      | ![](logos/zhejiarengongzhinengxueyuan.jpg){height=1.2cm}                     |
-|                                                                              |                                                                              |                                                                              |
-| Datawhale                                                                    | KAIYUANSHE                                                                   | Zhejiang Provincial Academy of Artificial Intelligence                       |
-+------------------------------------------------------------------------------+------------------------------------------------------------------------------+------------------------------------------------------------------------------+
-| ![](logos/zhedarengongzhineng.jpg){height=1.2cm}                             | ![](logos/shanghai-jiaotong-daxue-xiaohui.png){height=1.2cm}                 | ![](logos/shanghai-jiaotong-daxue-zhongwen-hengban.png){height=1.2cm}        |
-|                                                                              |                                                                              |                                                                              |
-| Center for AI Education and Teaching Research, Zhejiang University           | Artificial Intelligence Institute, Shanghai Jiao Tong University             | Antai College of Economics and Management, Shanghai Jiao Tong University     |
-+------------------------------------------------------------------------------+------------------------------------------------------------------------------+------------------------------------------------------------------------------+
-| ![](logos/moda-shequ.jpg){height=1.2cm}                                      | ![](logos/chuanbo-danao.png){height=1.2cm}                                   | ![](logos/chaoxinwen.png){height=1.2cm}                                      |
-|                                                                              |                                                                              |                                                                              |
-| ModelScope                                                                   | Commind                                                                      | Tide News                                                                    |
-+------------------------------------------------------------------------------+------------------------------------------------------------------------------+------------------------------------------------------------------------------+
-:::
+![](logos/unify-logos.png){width=100%}
 
 **March 2026**
 
@@ -40,7 +26,7 @@
 
 **Writing Team:** XU Xuchu, JIANG Jing, SI Yuxin, CHEN Limeng
 
-**Credit:** Writing Team; [Liuchang Tan](mailto:helenlctan@gmail.com); [Raphael 拉斐尔 Kohler](mailto:raphael.kohler@web.de)
+**English Writing Team:** [Liuchang Tan](mailto:helenlctan@gmail.com); [Raphael 拉斐尔 Kohler](mailto:raphael.kohler@web.de)
 
 **Expert Advisors:** WU Fei, JIN Yaohui, WANG Wei, JIANG Kaida, SHI Hongzhu, ZHANG Jian, LIN Lüqiang, WU Zhuo, TENG Ailing**\
 Preface**
