@@ -13,25 +13,25 @@ H = "1.2cm"
 ZH_PUB = [("hangzhoushirengongzhinengkaiyuanshengtaixueyuan.jpg", "杭州市人工智能开源生态学院")]
 ZH_CO = [
     ("zhejiarengongzhinengxueyuan.jpg", "浙江省人工智能学院"),
+    ("zhedarengongzhineng.jpg", "浙江大学人工智能教育教学研究中心"),
     ("shanghai-jiaotong-daxue-xiaohui.png", "上海交通大学人工智能研究院"),
     ("shanghai-jiaotong-daxue-zhongwen-hengban.png", "上海交通大学安泰经管学院"),
     ("moda-shequ.jpg", "魔搭社区"),
     ("chuanbo-danao.png", "传播大脑"),
     ("chaoxinwen.png", "潮新闻"),
     ("datawhale.png", "Datawhale"),
-    (None, "浙江大学人工智能教育教学研究中心"),
 ]
 EN_PUB = [("hangzhoushirengongzhinengkaiyuanshengtaixueyuan.jpg", "Hangzhou AI Open Source Ecosystem Academy")]
 EN_CO = [
     ("datawhale.png", "Datawhale"),
     ("kaiyuanshe.png", "KAIYUANSHE"),
     ("zhejiarengongzhinengxueyuan.jpg", "Zhejiang Provincial Academy of Artificial Intelligence"),
+    ("zhedarengongzhineng.jpg", "Center for AI Education and Teaching Research, Zhejiang University"),
     ("shanghai-jiaotong-daxue-xiaohui.png", "Artificial Intelligence Institute, Shanghai Jiao Tong University"),
     ("shanghai-jiaotong-daxue-zhongwen-hengban.png", "Antai College of Economics and Management, Shanghai Jiao Tong University"),
     ("moda-shequ.jpg", "ModelScope"),
     ("chuanbo-danao.png", "Commind"),
     ("chaoxinwen.png", "Tide News"),
-    (None, "Center for AI Education and Teaching Research, Zhejiang University"),
 ]
 W = 78  # cell width in characters (must fit the longest image markup)
 
