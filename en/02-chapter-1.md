@@ -10,7 +10,7 @@ An **open source ecosystem** is a technology innovation ecosystem built around o
 
 **AI open source**, like traditional software open source, is an open, shared and distributed model of collaborative development, but the object of openness extends from code repositories and development tools in the traditional sense to diverse technology assets such as AI-based models, corpora and datasets, and training frameworks\[4\]. In 2024, the Open Source Initiative (OSI) formally released the *Open Source AI Definition 1.0*. That definition carries forward the basic spirit of open source software, requires open models to be open and reproducible in key components such as weights, code and training data, and sets out core principles including the freedom to study, the freedom to modify and the freedom to distribute, establishing a basic framework for AI open source\[5\]. In practice, the degree of openness varies considerably between models: according to the tiered classification of model openness published by the Center for Research on Foundation Models at Stanford University, there are several gradual levels between closed source and fully open\[6\].
 
-![Figure 1: Tiers of open access for AI models](./media/image1.png){width="5.59375in" height="1.3909755030621171in"}
+![Figure 1: Tiers of open access for AI models](./media/image1-en.png){width="5.59375in"}
 
 An **AI open source ecosystem**, and especially a large model ecosystem, is a technology innovation ecosystem built around AI open source projects that brings together resources from many parties. Compared with a traditional software open source ecosystem, it has markedly stronger network effects and much greater room for empowerment.
 

@@ -2,7 +2,7 @@
 
 **3.1 Core elements of the open source AI ecosystem**
 
-**An open source AI ecosystem is an interconnected system of AI innovation organized around open source AI projects. It comprises five core elements: ecosystem participants, open source artifacts and tooling, collaboration networks, governance arrangements, and the broader enabling environment. These elements are interdependent, mutually reinforcing, and evolve together.**
+**An open source AI ecosystem is an interconnected system of AI innovation organized around open source AI projects. It comprises five core elements: ecosystem participants, open source artifacts and tooling, the open source network, open source governance, and the open source ecosystem environment. These elements are interdependent, mutually reinforcing, and evolve together.**
 
 Within this ecosystem, an **open source AI project** refers to an organized process through which contributors use particular AI technologies and artifacts to pursue defined project objectives. Such projects serve as the ecosystem's organizing hubs. **Open source artifacts and tooling** include large-scale AI models, datasets, training and inference code, AI development systems and toolchains, and software composition analysis (SCA) tools. Together, they form the technical foundation of the open source AI ecosystem.
 
@@ -59,7 +59,7 @@ Open source contributors, users, operators, service providers and governance bod
 | through "making talent visible".\[23\]                                                                                   |
 +--------------------------------------------------------------------------------------------------------------------------+
 
-![Figure 2: Diagram of the relationships among the core elements of an open source ecosystem](./media/image2.png){width="5.736729002624672in" height="2.6305457130358705in"}
+![Figure 2: Diagram of the relationships among the core elements of an open source ecosystem](./media/image2-en.png){width="5.736729002624672in"}
 
 The **open source network** comprises the interaction channels, relational structures, and collaborative mechanisms through which the open source ecosystem participants connect with one another and with open source projects. It forms the connective fabric of the open source AI ecosystem. Unlike the relatively loose, repository-centered collaboration networks associated with traditional open source software development, open source AI networks typically have complex, multi-layered structures spanning multiple roles and platforms. These networks take a variety of organizational and infrastructural forms, including project communities, platform-based communities, model-hosting platforms, industry alliances, and foundation-based governance structures. In structural terms, open source AI networks occupy a continuum ranging from decentralized to highly centralized configurations and evolve in response to changes in technological maturity, governance mechanisms, and commercial objectives.
 
@@ -71,11 +71,11 @@ The **open source ecosystem environment** refers to the broader economic, social
 
 **3.2 Ecosystem models of AI open source projects**
 
-In general, along two dimensions — collaboration model and governance intensity — the ecosystem models of AI open source projects can be divided into four types: the single-organization-led model, the peripheral-ecosystem model, the standard-exploration model and the neutral-governance model.
+In general, along two dimensions — collaboration model (i.e., the degree of network centralization) and governance intensity — the ecosystem models of AI open source projects can be divided into four types: the single-organization-led model, the peripheral-ecosystem model, the standard-exploration model and the neutral-governance model.
 
 China's AI open source projects show a markedly uneven distribution across these models: the single-organization-led and peripheral-ecosystem models predominate, while the standard-exploration and neutral-governance models are relatively few and still at an early stage of development.
 
-![](./media/image3.png){width="4.610925196850394in" height="2.847555774278215in"}
+![](./media/image3-en.png){width="4.610925196850394in"}
 
 Figure 3: Distribution of ecosystem models among China's AI open source projects
 
@@ -287,7 +287,9 @@ In large models, there is a certain technological gap between China and the Unit
 
 In large model software, the United States shows full-stack control from the underlying chips to the application layer, and has formed de facto standards in fields such as compilers and inference frameworks through extremely high adoption. China, by contrast, shows a pattern of "closed source at the foundation, open source at the application layer": Chinese cloud vendors open-source relatively little of the engineering capability they have accumulated in training platforms, inference platforms and cloud service infrastructure, and the open source ecosystem currently flourishes mainly at the application level, with localized activity in areas such as reinforcement learning and fine-tuning, reflecting China's strengths in engineering execution and use-case understanding. This paper carries out a statistical analysis based on the 114 globally influential open source projects in *The Open Source Development Ecosystem for Large Models: Landscape and Trends*\[51\], and the results show this situation directly: at the chip layer, the computing layer and the inference and training system layer, Chinese open source projects lag the United States considerably in both number and influence (the OpenRank metric). These areas are the foundation of AI commercialization; they directly determine model operating efficiency, cost and concurrency, and they are characterized by long development cycles, slow commercial returns, high technical moats and strong ecosystem lock-in effects. The current situation of closed source at the foundation in China, while conducive to greater engineering efficiency and stronger commercial barriers, easily leads to insufficient influence over technical standards and weak ecosystem spillover capacity, resulting in risks of technological dependence and constrained innovation.
 
-Table 3: China–US comparison of high-impact open source projects in large model software![](./media/image4.png){width="5.767361111111111in" height="3.2381944444444444in"}
+Table 3: China–US comparison of high-impact open source projects in large model software
+
+![](./media/image4-en.png){width="5.767361111111111in"}
 
 **3.4.3 Differences in ecosystem models: platform-centered and use-case-driven development in China; a more balanced mix in the United States**
 
